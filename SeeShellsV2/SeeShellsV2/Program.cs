@@ -31,6 +31,7 @@ namespace SeeShellsV2
 
             // Register Service Types
             container.RegisterType<ICsvImporter, CsvImporter>();
+            container.RegisterType<IPdfExporter, PdfExporter>();
 
             // Register Window Types
             container.RegisterType<IWindow, MainWindow>("main");
