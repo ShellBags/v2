@@ -17,6 +17,7 @@
                             </MenuItem>
                             <MenuItem Header="Export" Foreground="Black">
                                 <MenuItem Header="To CSV" Foreground="Black" Click="Export_CSV_Click"/>
+                                <MenuItem Header="To PDF" Foreground="Black" Click="Export_PDF_Click"/>
                             </MenuItem>
                         </MenuItem>
                     </Menu>

@@ -11,18 +11,24 @@ namespace SeeShellsV2.UI
 {
     public class MainWindowVM : ViewModel, IMainWindowVM
     {
-        [Dependency] public ICsvImporter importer { get; set; }
+        [Dependency] public ICsvImporter csvImporter { get; set; }
+        [Dependency] public IPdfExporter pdfImporter { get; set; }
 
         public string Title { get { return "SeeShells"; } }
 
         public void ImportFromCSV(string path)
         {
-            // importer.Import(path); => needs work
+            // csvImporter.Import(path); => needs work
         }
 
         public void ExportToCSV(string path)
         {
         
+        }
+
+        public void ExportToPDF(string path)
+        {
+            pdfImporter.Export();
         }
     }
 }

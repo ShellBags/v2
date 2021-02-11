@@ -51,5 +51,13 @@ namespace SeeShellsV2.UI
             if (openFileDialog.ShowDialog() == true)
                 ViewModel.ExportToCSV(openFileDialog.FileName);
         }
+        
+        private void Export_PDF_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "PDF file (*.pdf)|*.pdf|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+                ViewModel.ExportToPDF(openFileDialog.FileName);
+        }
     }
 }
